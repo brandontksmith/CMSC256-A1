@@ -7,6 +7,8 @@ package com.btks.a1.q3;
  */
 public class Rectangle extends Quadrilateral {
     
+    private static final double ANGLES_SUM = 180; // the total sum of two opposite angles in degrees
+    
     private double length; // the length of the Rectangle
     private double width;  // the width of the Rectangle
     
@@ -17,7 +19,7 @@ public class Rectangle extends Quadrilateral {
      * @param width  the width of the Rectangle
      */
     public Rectangle(double length, double width) {
-        super(180, length, width, length, width);
+        super(ANGLES_SUM, length, width, length, width);
         
         this.length = length;
         this.width = width;
