@@ -22,11 +22,17 @@ PROGRAM 2:
 
 	java -jar A1.jar Q2
 
-	From here, the program will prompt you...
+	From here, the program will prompt you for a number of lines, and then
+	have you enter that many lines. It will then reverse and print out each
+	line in reverse order.
 
 PROGRAM 3:
 
 	java -jar A1.jar Q3
+
+	From here, the program will prompt you to choose a Polygon, and then ask
+	you for the inputs of the specified polygon. It will output the area and
+	perimeter of the shape you choose.
 
 PROGRAM 4:
 
