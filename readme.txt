@@ -46,3 +46,11 @@ PROGRAM 4:
 	(you can use any file containing mathematical expressions line by
 	line to run this program. Just pass it as an argument in replacement
 	of input.txt.)
+
+DISCLAIMER:
+
+	I realize that this is publicly available. If you are in CMSC256 at VCU and
+	have this same assignment, do NOT copy this and pass it off as your own. You
+	will get caught, and I won't be held accountable for any cheating. This is
+	here to document the programs/projects I do both at home, work, and for my
+	classes at the university.
