@@ -1,0 +1,42 @@
+A JAR file has been created to make things easier. The source code for the
+different classes and programs are provided under the src folder. Here is
+directions on how to run the programs.
+
+IMPORTANT:
+
+	You must be in the directory of the JAR file (same as readme.txt file)
+	for the program to run with these exact commands. If you are not, then
+	ensure correct file paths.
+
+	Each component of the assignment runs by passing the program # as an
+	argument to the JAR file i.e. java -jar A1.jar Q<program #> <args>
+
+PROGRAM 1:
+
+	java -jar A1.jar Q1
+
+	From here, the program will prompt you to enter a list of words space
+	separated, and will count the occurrences of each word.
+
+PROGRAM 2:
+
+	java -jar A1.jar Q2
+
+	From here, the program will prompt you...
+
+PROGRAM 3:
+
+	java -jar A1.jar Q3
+
+PROGRAM 4:
+
+	java -jar A1.jar Q4 <input path>
+
+	Example: java -jar A1.jar Q4 input.txt
+
+	From here, the program will evaluate each mathematical expression, and
+	ouput the results.
+
+	(you can use any file containing mathematical expressions line by
+	line to run this program. Just pass it as an argument in replacement
+	of input.txt.)
