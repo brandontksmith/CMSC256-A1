@@ -1,4 +1,4 @@
-<h4>IMPORTANT:<h4>
+<h4>IMPORTANT:</h4>
 	
 	You must first compile the classes and create a JAR file to use this
 	program as described below. The directions to do this are below.
