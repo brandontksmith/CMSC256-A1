@@ -47,6 +47,14 @@ PROGRAM 4:
 	line to run this program. Just pass it as an argument in replacement
 	of input.txt.)
 
+PROGRAM 5:
+
+	java -jar A1.jar Q5 <input path>
+
+	Example: java -jar A1.jar Q5 input2.txt
+
+	From here, the program will determine how many boxes can be used.
+
 DISCLAIMER:
 
 	I realize that this is publicly available. If you are in CMSC256 at VCU and
