@@ -6,7 +6,7 @@
 	Each component of the assignment runs by passing the program # as an
 	argument to the JAR file i.e. java -jar A1.jar Q[program #] [args]
 
-<h4>COMPILING & THE JAR:<h4>
+<h4>COMPILING & THE JAR:</h4>
 
 	NOTE:
 
