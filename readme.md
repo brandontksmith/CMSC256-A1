@@ -67,14 +67,14 @@
 		The input file must only consist of mathematical expressions, with one expression
 		per line, and use the following operators:
 
-		> (, ), **, *, /, -, and +.
+		(, ), **, *, /, -, and +.
 
 		You are able to use white spaces, and of course, numeric digits. These are some
 		examples of valid expressions:
 
-		> 5 * (3 + 6) + 3** 2
-		> 8 - 3 + (2 * 3) - 17
-		> 8 ** 2 + 13
+		5 * (3 + 6) + 3** 2
+		8 - 3 + (2 * 3) - 17
+		8 ** 2 + 13
 
 <h4>PROGRAM 5:</h4>
 
@@ -90,7 +90,7 @@
 		dimensions of all boxes, separated by the number sign #. Dimensions are separated
 		by a comma. For example, a list of 4 boxes can be written as:
 
-			4#1,1,1#2,2,2#3,3,3#4,4,4
+		4#1,1,1#2,2,2#3,3,3#4,4,4
 
 <h4>DISCLAIMER:</h4>
 
