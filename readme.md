@@ -1,4 +1,4 @@
-IMPORTANT:
+<h3>IMPORTANT:<h3>
 	
 	You must first compile the classes and create a JAR file to use this
 	program as described below. The directions to do this are below.
@@ -6,10 +6,10 @@ IMPORTANT:
 	Each component of the assignment runs by passing the program # as an
 	argument to the JAR file i.e. java -jar A1.jar Q<program #> <args>
 
-COMPILING & THE JAR:
+<h3>COMPILING & THE JAR:<h3>
 
-	NOTE: You must be in the directory outside of the source code. So, we
-	      we want to be in the directory that contains com.
+	<strong>NOTE: You must be in the directory outside of the source code. So, 
+	we want to be in the directory that contains com.</strong>
 
 	1) Create a new directory called build. This is where we will store the
 	   compiled classes.
@@ -26,20 +26,20 @@ COMPILING & THE JAR:
 
 	5) The JAR file will now be inside build.
 
-	TIP:
+	<h4>TIP:</h4>
 
 		An IDE like NetBeans or Eclipse can compile and build this for you. If
 		you find this to be difficult, feel free to create a new project with
 		these classes and do it that way.
 
-PROGRAM 1:
+<h3>PROGRAM 1:</h3>
 
 	java -jar A1.jar Q1
 
 	From here, the program will prompt you to enter a list of words space
 	separated, and will count the occurrences of each word.
 
-PROGRAM 2:
+<h3>PROGRAM 2:</h3>
 
 	java -jar A1.jar Q2
 
@@ -47,7 +47,7 @@ PROGRAM 2:
 	have you enter that many lines. It will then reverse and print out each
 	line in reverse order.
 
-PROGRAM 3:
+<h3>PROGRAM 3:</h3>
 
 	java -jar A1.jar Q3
 
@@ -55,7 +55,7 @@ PROGRAM 3:
 	you for the inputs of the specified polygon. It will output the area and
 	perimeter of the shape you choose.
 
-PROGRAM 4:
+<h3>PROGRAM 4:</h3>
 
 	java -jar A1.jar Q4 <input path>
 
@@ -64,7 +64,7 @@ PROGRAM 4:
 	From here, the program will evaluate each mathematical expression, and
 	ouput the results.
 
-	NOTE:
+	<h4>NOTE:</h4>
 
 		The input file must only consist of mathematical expressions, with
 		one expression per line, and use the following operators:
@@ -78,7 +78,7 @@ PROGRAM 4:
 			8 - 3 + (2 * 3) - 17
 			8 ** 2 + 13
 
-PROGRAM 5:
+<h3>PROGRAM 5:</h3>
 
 	java -jar A1.jar Q5 <input path>
 
@@ -86,7 +86,7 @@ PROGRAM 5:
 
 	From here, the program will determine how many boxes can be used.
 
-	NOTE:
+	<h4>NOTE:</h4>
 
 		Each line in the input file starts with the number of boxes and then the
 		three dimensions of all boxes, separated by the number sign #. Dimensions
@@ -94,7 +94,7 @@ PROGRAM 5:
 
 			4#1,1,1#2,2,2#3,3,3#4,4,4
 
-DISCLAIMER:
+<h3>DISCLAIMER:</h3>
 
 	I realize that this is publicly available. If you are in CMSC256 at VCU and
 	have this same assignment, do NOT copy this and pass it off as your own. You
