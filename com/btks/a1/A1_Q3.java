@@ -23,6 +23,29 @@ public class A1_Q3 {
     private static Scanner reader = new Scanner(System.in);
     
     /**
+     * Prompt the user for an input that is a number until a valid number
+     * is entered.
+     * 
+     * @param message the message prompt to show to the user
+     * @return the number entered by the user
+     */
+    private static double askForDouble(String message) {
+        double value = -1;
+        
+        while (value < 0) {
+            System.out.print(message);
+            
+            if (reader.hasNextDouble()) {
+                value = reader.nextDouble();
+            }
+            
+            reader.nextLine();
+        }
+        
+        return value;
+    }
+    
+    /**
      * Takes necessary input for an Equilateral Triangle, and handles displaying
      * the output.
      */
@@ -30,8 +53,7 @@ public class A1_Q3 {
         double lengthOfSides;
         EquilateralTriangle triangle;
         
-        System.out.print("Enter the length of each side: ");
-        lengthOfSides = reader.nextDouble();
+        lengthOfSides = askForDouble("Enter the length of each side: ");
         
         triangle = new EquilateralTriangle(lengthOfSides);
         
@@ -46,11 +68,8 @@ public class A1_Q3 {
         double differentSide, equalSides;
         IsoscelesTriangle triangle;
         
-        System.out.print("Enter the length of the two equal sides: ");
-        equalSides = reader.nextDouble();
-        
-        System.out.print("Enter the length of the different side: ");
-        differentSide = reader.nextDouble();
+        equalSides = askForDouble("Enter the length of the two equal sides: ");
+        differentSide = askForDouble("Enter the length of the different side: ");
         
         triangle = new IsoscelesTriangle(differentSide, equalSides);
         
@@ -64,20 +83,11 @@ public class A1_Q3 {
         double sideA, sideB, sideC, sideD, angle;
         Quadrilateral quadrilateral;
         
-        System.out.print("Enter length of side A: ");
-        sideA = reader.nextDouble();
-        
-        System.out.print("Enter length of side B: ");
-        sideB = reader.nextDouble();
-        
-        System.out.print("Enter length of side C: ");
-        sideC = reader.nextDouble();
-        
-        System.out.print("Enter length of side D: ");
-        sideD = reader.nextDouble();
-        
-        System.out.print("Enter the sum of two opposite angles: ");
-        angle = reader.nextDouble();
+        sideA = askForDouble("Enter length of side A: ");
+        sideB = askForDouble("Enter length of side B: ");
+        sideC = askForDouble("Enter length of side C: ");
+        sideD = askForDouble("Enter length of side D: ");
+        angle = askForDouble("Enter the sum of two opposite angles: ");
         
         quadrilateral = new Quadrilateral(angle, sideA, sideB, sideC, sideD);
         
@@ -91,11 +101,8 @@ public class A1_Q3 {
         double length, width;
         Rectangle rectangle;
         
-        System.out.print("Enter length of rectangle: ");
-        length = reader.nextDouble();
-        
-        System.out.print("Enter width of rectangle: ");
-        width = reader.nextDouble();
+        length = askForDouble("Enter length of rectangle: ");
+        width = askForDouble("Enter width of rectangle: ");
         
         rectangle = new Rectangle(length, width);
         
@@ -109,8 +116,7 @@ public class A1_Q3 {
         double lengthOfSides;
         Square square;
         
-        System.out.print("Enter the length of each side: ");
-        lengthOfSides = reader.nextDouble();
+        lengthOfSides = askForDouble("Enter the length of each side: ");
         
         square = new Square(lengthOfSides);
         
@@ -124,14 +130,9 @@ public class A1_Q3 {
         double sideA, sideB, sideC;
         Triangle triangle;
         
-        System.out.print("Enter length of side A: ");
-        sideA = reader.nextDouble();
-        
-        System.out.print("Enter length of side B: ");
-        sideB = reader.nextDouble();
-        
-        System.out.print("Enter length of side C: ");
-        sideC = reader.nextDouble();
+        sideA = askForDouble("Enter length of side A: ");
+        sideB = askForDouble("Enter length of side B: ");
+        sideC = askForDouble("Enter length of side C: ");
         
         triangle = new Triangle(sideA, sideB, sideC);
         
@@ -168,7 +169,14 @@ public class A1_Q3 {
         
         while (true) {
             System.out.print("Enter option: ");
-            int shapeChosen = reader.nextInt();
+            
+            int shapeChosen = 0;
+            
+            if (reader.hasNextInt()) {
+                shapeChosen = reader.nextInt();
+            }
+            
+            reader.nextLine();
             
             switch (shapeChosen) {
                 case 1:
