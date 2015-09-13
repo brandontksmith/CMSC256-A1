@@ -1,10 +1,8 @@
 <h4>IMPORTANT:</h4>
 	
-	You must first compile the classes and create a JAR file to use this
-	program as described below. The directions to do this are below.
+	You must first compile the classes and create a JAR file to use this program as described below. The directions to do this are below.
 
-	Each component of the assignment runs by passing the program # as an
-	argument to the JAR file i.e. java -jar A1.jar Q[program #] [args]
+	Each component of the assignment runs by passing the program # as an argument to the JAR file i.e. java -jar A1.jar Q[program #] [args]
 
 <h4>COMPILING & THE JAR:</h4>
 
