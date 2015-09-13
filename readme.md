@@ -8,8 +8,10 @@
 
 <h4>COMPILING & THE JAR:</h4>
 
-	NOTE: You must be in the directory outside of the source code. So, we want to be in the
-	      directory that contains com.
+	NOTE:
+
+		*You must be in the directory outside of the source code. So, we want to be in the
+		directory that contains com.*
 
 	1) Create a new directory called build. This is where we will store the compiled classes.
 
@@ -65,14 +67,14 @@
 		The input file must only consist of mathematical expressions, with one expression
 		per line, and use the following operators:
 
-			(, ), **, *, /, -, and +.
+		> (, ), **, *, /, -, and +.
 
 		You are able to use white spaces, and of course, numeric digits. These are some
 		examples of valid expressions:
 
-			5 * (3 + 6) + 3** 2
-			8 - 3 + (2 * 3) - 17
-			8 ** 2 + 13
+		> 5 * (3 + 6) + 3** 2
+		> 8 - 3 + (2 * 3) - 17
+		> 8 ** 2 + 13
 
 <h4>PROGRAM 5:</h4>
 
