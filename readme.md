@@ -8,10 +8,8 @@
 
 <h4>COMPILING & THE JAR:</h4>
 
-	NOTE:
-
-		You must be in the directory outside of the source code. So, 
-		we want to be in the directory that contains com.
+	NOTE: You must be in the directory outside of the source code. So, we 
+	      want to be in the directory that contains com.
 
 	1) Create a new directory called build. This is where we will store the
 	   compiled classes.
