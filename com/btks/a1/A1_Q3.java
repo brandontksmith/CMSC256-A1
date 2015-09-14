@@ -1,6 +1,7 @@
 package com.btks.a1;
 
 import com.btks.a1.q3.EquilateralTriangle;
+import com.btks.a1.q3.InvalidTriangleException;
 import com.btks.a1.q3.IsoscelesTriangle;
 import com.btks.a1.q3.Polygon;
 import com.btks.a1.q3.Quadrilateral;
@@ -55,9 +56,12 @@ public class A1_Q3 {
         
         lengthOfSides = askForDouble("Enter the length of each side: ");
         
-        triangle = new EquilateralTriangle(lengthOfSides);
-        
-        displayPerimeterAndArea(triangle);
+        try {
+            triangle = new EquilateralTriangle(lengthOfSides);
+            displayPerimeterAndArea(triangle);
+        } catch (InvalidTriangleException e) {
+            System.out.println(e.getMessage() + "\n\n");
+        }
     }
 
     /**
@@ -71,9 +75,12 @@ public class A1_Q3 {
         equalSides = askForDouble("Enter the length of the two equal sides: ");
         differentSide = askForDouble("Enter the length of the different side: ");
         
-        triangle = new IsoscelesTriangle(differentSide, equalSides);
-        
-        displayPerimeterAndArea(triangle);
+        try {
+            triangle = new IsoscelesTriangle(differentSide, equalSides);
+            displayPerimeterAndArea(triangle);
+        } catch (InvalidTriangleException e) {
+            System.out.println(e.getMessage() + "\n\n");
+        }
     }
 
     /**
@@ -134,9 +141,12 @@ public class A1_Q3 {
         sideB = askForDouble("Enter length of side B: ");
         sideC = askForDouble("Enter length of side C: ");
         
-        triangle = new Triangle(sideA, sideB, sideC);
-        
-        displayPerimeterAndArea(triangle);
+        try {
+            triangle = new Triangle(sideA, sideB, sideC);
+            displayPerimeterAndArea(triangle);
+        } catch (InvalidTriangleException e) {
+            System.out.println(e.getMessage() + "\n\n");
+        }
     }
     
     /**
@@ -146,8 +156,8 @@ public class A1_Q3 {
      */
     private static void displayPerimeterAndArea(Polygon shape) {
         System.out.println();
-        System.out.println("Area: " + shape.area());
-        System.out.println("Perimeter: " + shape.perimeter());
+        System.out.printf("Area: %.2f\n", shape.area());
+        System.out.printf("Perimeter: %.2f\n", shape.perimeter());
         System.out.println();
         System.out.println();
     }
