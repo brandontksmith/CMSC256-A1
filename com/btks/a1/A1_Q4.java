@@ -36,10 +36,9 @@ public class A1_Q4 {
     /**
      * The main method where everything begins.
      * 
-     * @param args
-     * @throws FileNotFoundException 
+     * @param args command like arguments
      */
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         String fileName = "";
         FileReader file = null;
         
@@ -47,7 +46,7 @@ public class A1_Q4 {
         if (args.length > 0) {
             fileName = args[0];
         } else {
-            System.out.println("Error: Program must be executed as java A1_Q4 [path_of_file]");
+            System.out.println("Error: Program must contain the path of the file as a command line argument.");
             System.exit(0);
         }
         

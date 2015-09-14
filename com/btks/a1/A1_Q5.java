@@ -17,7 +17,7 @@ public class A1_Q5 {
         if (args.length > 0) {
             fileName = args[0];
         } else {
-            System.out.println("Error: Program must contain the path of the file.");
+            System.out.println("Error: Program must contain the path of the file as a command line argument.");
             System.exit(0);
         }
         
