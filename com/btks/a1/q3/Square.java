@@ -9,7 +9,7 @@ public class Square extends Quadrilateral {
     
     private static final double ANGLES_SUM = 180; // the total sum of two opposite angles in degrees
     
-    private double lengthOfSides; // the length of each side
+    private final double lengthOfSides; // the length of each side
     
     /**
      * Construct a new Square.
@@ -23,16 +23,9 @@ public class Square extends Quadrilateral {
     }
 
     /**
-     * @return the length of each side
+     * Returns the length of each side.
      */
     public double getLengthOfSides() {
         return lengthOfSides;
     }
-
-    /**
-     * @param lengthOfSides the length of each side
-     */
-    public void setLengthOfSides(double lengthOfSides) {
-        this.lengthOfSides = lengthOfSides;
-    }   
 }

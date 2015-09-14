@@ -7,12 +7,12 @@ package com.btks.a1.q3;
  */
 public class Quadrilateral implements Polygon {
     
-    private double angle; // the the sum of two opposite angles (in degrees)
+    private final double angle; // the the sum of two opposite angles (in degrees)
     
-    private double sideA; // the length of side A
-    private double sideB; // the length of side B
-    private double sideC; // the length of side C
-    private double sideD; // the length of side D
+    private final double sideA; // the length of side A
+    private final double sideB; // the length of side B
+    private final double sideC; // the length of side C
+    private final double sideD; // the length of side D
     
     /**
      * Construct a new Quadrilateral.
@@ -36,6 +36,7 @@ public class Quadrilateral implements Polygon {
      * 
      * @return the area of the quadrilateral
      */
+    @Override
     public double area() {
         double area;
         
@@ -52,73 +53,38 @@ public class Quadrilateral implements Polygon {
     }
     
     /**
-     * @return the sum of two opposite angles (in degrees)
+     * Returns the sum of two opposite angles (in degrees).
      */
     public double getAngle() {
         return angle;
     }
-
-    /**
-     * @param angle the sum of two opposite angles (in degrees)
-     */
-    public void setAngle(double angle) {
-        this.angle = angle;
-    }
     
     /**
-     * @return the length of side A
+     * Returns the length of side A.
      */
     public double getSideA() {
         return sideA;
     }
 
     /**
-     * @param sideA the length of side A
-     */
-    public void setSideA(double sideA) {
-        this.sideA = sideA;
-    }
-
-    /**
-     * @return the length of side B
+     * Returns the length of side B.
      */
     public double getSideB() {
         return sideB;
     }
-
+    
     /**
-     * @param sideB the length of side B
-     */
-    public void setSideB(double sideB) {
-        this.sideB = sideB;
-    }
-
-    /**
-     * @return the length of side C
+     * Returns the length of side C.
      */
     public double getSideC() {
         return sideC;
     }
 
     /**
-     * @param sideC the length of side C
-     */
-    public void setSideC(double sideC) {
-        this.sideC = sideC;
-    }
-
-    /**
-     * @return the length of side D
+     * Returns the length of side D.
      */
     public double getSideD() {
         return sideD;
-    }
-
-    /**
-     * @param sideD the length of side D
-     */
-    public void setSideD(double sideD) {
-        this.sideD = sideD;
     }
     
     /**
@@ -126,6 +92,7 @@ public class Quadrilateral implements Polygon {
      * 
      * @return the perimeter of the quadrilateral
      */
+    @Override
     public double perimeter() {
         double perimeter;
         
