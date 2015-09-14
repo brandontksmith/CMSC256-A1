@@ -7,16 +7,17 @@ package com.btks.a1.q3;
  */
 public class IsoscelesTriangle extends Triangle {
     
-    private double differentSide; // the length of the different side
-    private double equalSides;    // the length of the two equal sides
+    private final double differentSide; // the length of the different side
+    private final double equalSides;    // the length of the two equal sides
     
     /**
      * Construct a new Isosceles Triangle.
      * 
      * @param differentSide the length of the different side
      * @param equalSides    the length of the two equal side
+     * @throws com.btks.a1.q3.InvalidTriangleException the lengths do not make a Triangle
      */
-    public IsoscelesTriangle(double differentSide, double equalSides) {        
+    public IsoscelesTriangle(double differentSide, double equalSides) throws InvalidTriangleException {        
         super(equalSides, equalSides, differentSide);
 
         this.differentSide = differentSide;
@@ -24,30 +25,16 @@ public class IsoscelesTriangle extends Triangle {
     }    
 
     /**
-     * @return the length of the different side
+     * Returns the length of the different side.
      */
     public double getDifferentSide() {
         return differentSide;
     }
     
     /**
-     * @param differentSide the length of the different side
-     */
-    public void setDifferentSide(double differentSide) {
-        this.differentSide = differentSide;
-    }
-
-    /**
-     * @return the length of the two equal sides
+     * Returns the length of the two equal sides.
      */
     public double getEqualSides() {
         return equalSides;
-    }
-
-    /**
-     * @param equalSides the length of the two equal sides
-     */
-    public void setEqualSides(double equalSides) {
-        this.equalSides = equalSides;
     }
 }

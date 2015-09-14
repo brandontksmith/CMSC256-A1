@@ -7,30 +7,24 @@ package com.btks.a1.q3;
  */
 public class EquilateralTriangle extends Triangle {
     
-    private double lengthOfSides; // the length for all sides
+    private final double lengthOfSides; // the length for all sides
     
     /**
      * Construct a new Equilateral Triangle.
      * 
      * @param lengthOfSides the length for all sides of the Triangle
+     * @throws com.btks.a1.q3.InvalidTriangleException the lengths do not make a Triangle
      */
-    public EquilateralTriangle(double lengthOfSides) {        
+    public EquilateralTriangle(double lengthOfSides) throws InvalidTriangleException {
         super(lengthOfSides, lengthOfSides, lengthOfSides);
         
         this.lengthOfSides = lengthOfSides;
-    }    
-
+    }
+    
     /**
-     * @return the length of all sides
+     * Returns the length of all sides.
      */
     public double getLengthOfSides() {
         return lengthOfSides;
-    }
-
-    /**
-     * @param lengthOfSides the length of all sides
-     */
-    public void setLengthOfSides(double lengthOfSides) {
-        this.lengthOfSides = lengthOfSides;
     }
 }

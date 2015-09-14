@@ -7,9 +7,9 @@ package com.btks.a1.q3;
  */
 public class Triangle implements Polygon {
     
-    private double sideA; // the length of side A
-    private double sideB; // the length of side B
-    private double sideC; // the length of side C
+    private final double sideA; // the length of side A
+    private final double sideB; // the length of side B
+    private final double sideC; // the length of side C
     
     /**
      * Construct a new Triangle.
@@ -17,11 +17,16 @@ public class Triangle implements Polygon {
      * @param sideA the length of side A
      * @param sideB the length of side B
      * @param sideC the length of side C
+     * @throws com.btks.a1.q3.InvalidTriangleException the lengths do not make a Triangle
      */
-    public Triangle(double sideA, double sideB, double sideC) {
+    public Triangle(double sideA, double sideB, double sideC) throws InvalidTriangleException {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
+        
+        if (!isValid()) {
+            throw new InvalidTriangleException("The three side lengths do not make a Triangle.");
+        }
     }
     
     /**
@@ -29,8 +34,10 @@ public class Triangle implements Polygon {
      * 
      * @return the area of the Triangle
      */
+    @Override
     public double area() {
-        double area = 0;
+        double area;
+        
         
         double halfPerimeter = perimeter() / 2;
         
@@ -45,52 +52,50 @@ public class Triangle implements Polygon {
     }
     
     /**
-     * @return the length of side A
+     * Returns the length of side A.
      */
     public double getSideA() {
         return sideA;
     }
     
     /**
-     * @param sideA the length of side A
-     */
-    public void setSideA(double sideA) {
-        this.sideA = sideA;
-    }
-
-    /**
-     * @return the length of side B
+     * Returns the length of side B.
      */
     public double getSideB() {
         return sideB;
     }
-
+    
     /**
-     * @param sideB the length of side B
-     */
-    public void setSideB(double sideB) {
-        this.sideB = sideB;
-    }
-
-    /**
-     * @return the length of side C
+     * Returns the length of side C.
      */
     public double getSideC() {
         return sideC;
     }
-
+    
     /**
-     * @param sideC the length of side C
+     * Returns whether or not the three sides can make a Triangle.
+     * 
+     * @return true if the Triangle Inequality Theorem holds, false otherwise
      */
-    public void setSideC(double sideC) {
-        this.sideC = sideC;
+    public boolean isValid() {
+        /*
+         * A Triangle is valid if, and only if, it passes the Triangle Inequality Theorem,
+         * which states that the sum of two sides lengths is greater than the third. This
+         * must hold for all three combinations.
+         */
+        if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
+            return true;
+        }
+        
+        return false;
     }
-
+    
     /**
      * Calculates the perimeter of the Triangle.
-     * 
+     *
      * @return the perimeter of the triangle
      */
+    @Override
     public double perimeter() {
         double perimeter = sideA + sideB + sideC;
         
