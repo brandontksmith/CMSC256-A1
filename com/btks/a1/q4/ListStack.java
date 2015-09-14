@@ -34,6 +34,7 @@ public class ListStack<E> implements Stack<E> {
      * 
      * @return true if the stack is empty, false otherwise
      */
+    @Override
     public boolean isEmpty() {
         return list.isEmpty();
     }
@@ -45,6 +46,7 @@ public class ListStack<E> implements Stack<E> {
      * 
      * @return the element at the top of the stack or null
      */
+    @Override
     public E peek() {
         if (isEmpty()) {
             return null;
@@ -60,6 +62,7 @@ public class ListStack<E> implements Stack<E> {
      * 
      * @return the element at the top of the stack or null
      */
+    @Override
     public E pop() {
         if (isEmpty()) {
             return null;
@@ -73,6 +76,7 @@ public class ListStack<E> implements Stack<E> {
      * 
      * @param item the item to push onto the stack
      */
+    @Override
     public void push(E item) {
         list.addFirst(item);
     }
@@ -82,6 +86,7 @@ public class ListStack<E> implements Stack<E> {
      * 
      * @return the size of the stack
      */
+    @Override
     public int size() {
         return list.size();
     }
