@@ -145,7 +145,7 @@ public class MaximumBoxes {
     }
     
     /**
-     * @return an array consisting of each box
+     * Returns an array consisting of each box.
      */
     public Box[] getBoxes() {
         return boxes;
