@@ -1,7 +1,5 @@
 package com.btks.a1;
 
-import java.io.FileNotFoundException;
-
 /**
  * This is the main entry point of the application.
  * 
@@ -14,7 +12,7 @@ public class A1 {
      * 
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         // the program has not been excuted properly; display instructions and exit
         if (args.length == 0) {
             System.out.println("ERROR: You have not specified which component to run.\n\n"
@@ -23,7 +21,8 @@ public class A1 {
                                 + "Q1              reads a list of words and calculates occurrences\n"
                                 + "Q2              reads strings and reverses string and order\n"
                                 + "Q3              compute area and perimeter of polgygon(s) \n"
-                                + "Q4 <input path> evaluate mathematical expressions");
+                                + "Q4 <input path> evaluate mathematical expressions\n"
+                                + "Q5 <input path> determine maximum boxes that can be used");
             
             System.exit(-1);
         }
@@ -44,6 +43,8 @@ public class A1 {
             A1_Q3.main(argsWithoutComponent);
         } else if (args[0].equals("Q4")) {
             A1_Q4.main(argsWithoutComponent);
+        } else if (args[0].equals("Q5")) {
+            A1_Q5.main(argsWithoutComponent);
         } else {
             System.out.println("You have not executed the program properly. Please try again. Quitting.");
         }
