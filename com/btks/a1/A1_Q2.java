@@ -14,7 +14,7 @@ public class A1_Q2 {
     /**
      * The main method where the program starts.
      * 
-     * @param args 
+     * @param args command line arguments
      */
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
