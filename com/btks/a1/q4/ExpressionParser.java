@@ -182,12 +182,19 @@ public class ExpressionParser {
      * @return the result of the expression
      */
     public static double solve(String expression) {
-        ListStack<Double> valueStack = new ListStack<>();
-        ListStack<String> operatorStack = new ListStack<>();
+        ListStack<Double> valueStack = new ListStack<>();       // a stack that holds values
+        ListStack<String> operatorStack = new ListStack<>();    // a stack that holds operators
         
+        /*
+         * Credit to http://www.geeksforgeeks.org/expression-evaluation/ for the algorithm
+         * sed to parse this infix mathematical expression
+         */
+        
+        /* iterate through each character in the expression */
         for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
             
+            /* skip this character if it is a space */
             if (isWhiteSpace(c)) {
                 continue;
             }
@@ -197,6 +204,10 @@ public class ExpressionParser {
                 
                 int j = i + 1;
                 
+                /*
+                 * loop through the expression string to obtain the entire number, stopping whenever a
+                 * space, operator, or the end of the expression is encountered
+                 */
                 while (j < expression.length() && !isOperator(c = expression.charAt(j)) && !isWhiteSpace(c)) {
                     number += c;
                     
@@ -207,22 +218,36 @@ public class ExpressionParser {
             } else if (isOpenParenthesis(c)) {
                 operatorStack.push("(");
             } else if (isClosedParenthesis(c)) {
+                /*
+                 * a right parenthesis has been encountered, so we want to perform all of the operations
+                 * placed on the stack until the top of the stack contains an open parenthesis (which signifies
+                 * that the end of the expression within the parenthesis has been met) or the stack becomes empty
+                 */
                 while (!operatorStack.isEmpty() && !operatorStack.peek().equals("(")) {
                     double result = performOperation(operatorStack.pop(), valueStack.pop(), valueStack.pop());
                     
                     valueStack.push(result);
                 }
                 
+                /* remove the open parenthesis */
                 operatorStack.pop();
             } else if (isOperator(c)) {
                 String operator = Character.toString(c);
                 
+                /* 
+                 * if the next character in the expression is also a star, then the operation is the
+                 * power function and not a multiplication operator.
+                 */
                 if (operator.equals("*") && expression.charAt(i + 1) == '*') {
                     operator += "*";
                     
                     i++;
                 }
                 
+                /*
+                 * perform operations on the stack while the operator on top of the operator stack has
+                 * greater or equal precedence to the operator being used as comparison
+                 */
                 while (!operatorStack.isEmpty() && hasPrecedence(operatorStack.peek(), operator)) {
                     double result = performOperation(operatorStack.pop(), valueStack.pop(), valueStack.pop());
                     
@@ -230,11 +255,10 @@ public class ExpressionParser {
                 }
                 
                 operatorStack.push(operator);
-            } else {
-                
             }
         }
         
+        /* finish any remaining calculations until the stack is empty */
         while (!operatorStack.isEmpty()) {
             double result = performOperation(operatorStack.pop(), valueStack.pop(), valueStack.pop());
             
