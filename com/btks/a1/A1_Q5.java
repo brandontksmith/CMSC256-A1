@@ -7,6 +7,12 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * This class tests the MaximumBoxes class used to determine the maximum number
+ * of boxes that can be used to wrap a gift.
+ * 
+ * @author BTKS
+ */
 public class A1_Q5 {
     
     public static void main(String[] args) {
@@ -21,6 +27,7 @@ public class A1_Q5 {
             System.exit(0);
         }
         
+        // get an instance of a FileReader to scan the file
         try {
             file = new FileReader(fileName);
         } catch (FileNotFoundException e) {
@@ -50,8 +57,10 @@ public class A1_Q5 {
             Box[] boxes = new Box[Integer.parseInt(boxesArr[0])];
 
             for (int i = 1; i < boxesArr.length; i++) {
+                // split the string that contains the length,width,height of box
                 String[] dims = boxesArr[i].split(",");
 
+                // length is index 0, width is index 1, height is index 2
                 int length = Integer.parseInt(dims[0]);
                 int width = Integer.parseInt(dims[1]);
                 int height = Integer.parseInt(dims[2]);

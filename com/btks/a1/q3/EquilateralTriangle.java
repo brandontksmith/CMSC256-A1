@@ -5,7 +5,7 @@ package com.btks.a1.q3;
  * 
  * @author BTKS
  */
-public class EquilateralTriangle extends Triangle {
+public class EquilateralTriangle extends IsoscelesTriangle {
     
     private final double lengthOfSides; // the length for all sides
     
@@ -16,7 +16,7 @@ public class EquilateralTriangle extends Triangle {
      * @throws com.btks.a1.q3.InvalidTriangleException the lengths do not make a Triangle
      */
     public EquilateralTriangle(double lengthOfSides) throws InvalidTriangleException {
-        super(lengthOfSides, lengthOfSides, lengthOfSides);
+        super(lengthOfSides, lengthOfSides);
         
         this.lengthOfSides = lengthOfSides;
     }

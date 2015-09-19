@@ -188,6 +188,7 @@ public class A1_Q3 {
             
             reader.nextLine();
             
+            // execute the method that matches the chosen option
             switch (shapeChosen) {
                 case 1:
                     chooseTriangle();

@@ -65,7 +65,7 @@ public class A1_Q4 {
         while (s.hasNextLine()) {
             String line = s.nextLine();
             
-            // the line is blank; do not evaluate this line
+            // the line is blank, do not evaluate this line
             if (line.equals("") || line.equals(" ")) {
                 continue;
             }
@@ -75,7 +75,15 @@ public class A1_Q4 {
         
         // evaluate and print out the result of each line
         for (String str : list) {
-            double result = ExpressionParser.solve(str);
+            double result = 0;
+            
+            // the ExpressionParser was written by me, and is in the com.btks.a1.q4 package
+            try {
+                result = ExpressionParser.solve(str);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Unable to solve provided expression. " + e.getMessage());
+                System.exit(-1);
+            }
             
             formatAndPrintNumber(result);
         }

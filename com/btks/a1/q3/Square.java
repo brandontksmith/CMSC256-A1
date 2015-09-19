@@ -5,10 +5,8 @@ package com.btks.a1.q3;
  * 
  * @author BTKS
  */
-public class Square extends Quadrilateral {
-    
-    private static final double ANGLES_SUM = 180; // the total sum of two opposite angles in degrees
-    
+public class Square extends Rectangle {
+        
     private final double lengthOfSides; // the length of each side
     
     /**
@@ -17,7 +15,7 @@ public class Square extends Quadrilateral {
      * @param lengthOfSides the length of each side
      */
     public Square(double lengthOfSides) {
-        super(ANGLES_SUM, lengthOfSides, lengthOfSides, lengthOfSides, lengthOfSides);
+        super(lengthOfSides, lengthOfSides);
         
         this.lengthOfSides = lengthOfSides;
     }

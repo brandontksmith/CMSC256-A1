@@ -161,7 +161,7 @@ public class ExpressionParser {
         } else if (op.equals("-")) {
             value = b - a;
         } else if (op.equals("/")) {
-            if (b == 0) {
+            if (a == 0) {
                 throw new IllegalArgumentException("Divison by zero is illegal.");
             }
             
@@ -181,13 +181,13 @@ public class ExpressionParser {
      * @param expression the mathematical expression to evaluate
      * @return the result of the expression
      */
-    public static double solve(String expression) {
+    public static double solve(String expression) throws IllegalArgumentException {
         ListStack<Double> valueStack = new ListStack<>();       // a stack that holds values
         ListStack<String> operatorStack = new ListStack<>();    // a stack that holds operators
         
         /*
          * Credit to http://www.geeksforgeeks.org/expression-evaluation/ for the algorithm
-         * sed to parse this infix mathematical expression
+         * used to parse this infix mathematical expression
          */
         
         /* iterate through each character in the expression */
